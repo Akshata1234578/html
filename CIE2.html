@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>College Timetable</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #2c3e50;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      border: 5px double #2c3e50;
+    }
+
+    th, td {
+      border: 1px solid #555;
+      padding: 10px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #3498db;
+      color: white;
+    }
+
+        td.lunch, th.lunch {
+      border-left: 3px double #2c3e50;
+      border-right: 3px double #2c3e50;
+      background-color: #f9f9f9;
+      font-weight: bold;
+      color: #2c3e50;
+    }
+
+       .sub1 {  color: #c62828; font-weight: bold; }
+    .sub2 {  color: #2e7d32; font-weight: bold; }
+    .sub3 { color: #1565c0; font-weight: bold; }
+    .sub4 { color: #6a1b9a; font-weight: bold; }
+    .sub5 {  color: #ef6c00; font-weight: bold; }
+    .sub6 {  color: #4527a0; font-weight: bold; }
+    .sub7 {  color: #d84315; font-weight: bold; }
+
+    tr:hover td {
+      background-color: #e0f7fa;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>College Timetable</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Day</th>
+        <th>9:00 - 10:00</th>
+        <th>10:00 - 11:00</th>
+        <th>11:00 - 12:00</th>
+        <th>12:00 - 1:00</th>
+        <th class="lunch">1:00 - 2:00</th>
+        <th>2:00 - 3:00</th>
+        <th>3:00 - 4:00</th>
+        <th>4:00 - 5:00</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Monday</td>
+        <td >--</td>
+        <td class="sub1">Sub1</td>
+        <td class="sub2">Sub2</td>
+        <td class="sub3">Sub3</td>
+        <td class="lunch">Lunch</td>
+        <td class="sub4">Sub4</td>
+        <td class="sub5">Sub</td>
+        <td class="councelling class">Counselling class</td>
+      </tr>
+      <tr>
+        <td>Tuesday</td>
+        <td class="sub2">Sub2</td>
+        <td class="sub3">Sub3</td>
+        <td class="sub4">Sub4</td>
+        <td class="sub5">Sub5</td>
+        <td class="lunch">Lunch</td>
+        <td class="sub6">Sub6</td>
+        <td class="sub7">Sub7</td>
+        <td class="sub1">Sub1</td>
+      </tr>
+      <tr>
+        <td>Wednesday</td>
+        <td class="sub3">Sub3</td>
+        <td class="sub4">Sub4</td>
+        <td class="sub5">Sub5</td>
+        <td class="sub6">Sub6</td>
+        <td class="lunch">Lunch</td>
+        <td class="sub7">Sub7</td>
+        <td class="sub1">Sub1</td>
+        <td class="sub2">Sub2</td>
+      </tr>
+      <tr>
+        <td>Thursday</td>
+        <td class="sub4">Sub4</td>
+        <td class="sub5">Sub5</td>
+        <td class="sub6">Sub6</td>
+        <td class="sub7">Sub7</td>
+        <td class="lunch">Lunch</td>
+        <td class="sub1">Sub1</td>
+        <td class="sub2">Sub2</td>
+        <td class="sub3">Sub3</td>
+      </tr>
+      <tr>
+        <td>Friday</td>
+        <td class="sub5">Sub5</td>
+        <td class="sub6">Sub6</td>
+        <td class="sub7">Sub7</td>
+        <td class="sub1">Sub1</td>
+        <td class="lunch">Lunch</td>
+        <td class="sub2">Sub2</td>
+        <td class="sub3">Sub3</td>
+        <td class="sub4">Sub4</td>
+      </tr>
+      <tr>
+        <td>Saturday</td>
+        <td class="sub6">Sub6</td>
+        <td class="sub7">Sub7</td>
+        <td class="sub1">Sub1</td>
+        <td class="sub2">Sub2</td>
+        <td class="lunch">Lunch</td>
+        <td class="sub3">Sub3</td>
+        <td class="sub4">Sub4</td>
+        <td class="sub5">Sub5</td>
+      </tr>
+    </tbody>
+  </table>
+
+</body>
+</html>
