@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <Title> Welcome to My Homepage </Title>
+    <style>
+        /* Vertical nav on right side */
+        aside {
+            background-color: skyblue;
+            color: white;
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            padding: 10px;
+            border-radius: 10px;
+            gap: 10px;
+            width: 140px;
+        }
+
+
+        nav {
+            background-color: #f8d7da;
+            /* Light red */
+            position: fixed;
+            top: 5px;
+            left: 10px;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            gap: 0.2px;
+            width: 140px;
+        }
+
+        nav button {
+            color: #b30000;
+            padding: 8px 12px;
+            font-weight: bold;
+            font-family: Arial, sans-serif;
+            cursor: pointer;
+            text-align: center;
+            border-radius: 4px;
+            border: 2px solid #b30000;
+            background-color: white;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        nav button:hover,
+        nav button:focus {
+            background-color: #f5c6cb;
+            outline: none;
+        }
+
+        /* Container with content taking full height except bottom sidebar */
+        .container {
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+            padding: 20px;
+            box-sizing: border-box;
+            justify-content: flex-start;
+            align-items: center;
+            height: auto;
+            /* Fix: removes forced full viewport height */
+        }
+
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+            padding: 40px;
+            box-sizing: border-box;
+            justify-content: flex-start;
+            align-items: center;
+            height: auto;
+            /* Fix: removes forced full viewport height */
+        }
+
+        .welcome-box {
+            background-color: green;
+            color: white;
+            padding: 30px 20px;
+            border-radius: 10px;
+            margin: 0 20px 20px 20px;
+            text-align: center;
+            box-sizing: border-size;
+        }
+
+
+
+        /* font style for menu to select differnt.. */
+        .menu-instruction {
+            margin-bottom: 30px;
+            font-style: italic;
+            color: white;
+            font-weight: 600;
+
+        }
+
+        body.style1 {
+            background-color: #e0f7fa;
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+
+        body.style1 .content {
+            background-color: #b2ebf2;
+            color: #000;
+        }
+
+        body.style2 {
+            background-color: #fff0f5;
+            font-family: Verdana, sans-serif;
+            margin: 0;
+        }
+
+        body.style2 .sidebar {
+            background-color: #e91e63;
+        }
+
+        body.style2 .content {
+            background-color: #f8bbd0;
+            color: #000;
+        }
+
+        body.style3 {
+            background-color: #f3e5f5;
+            font-family: 'Courier New', monospace;
+            margin: 0;
+        }
+
+        body.style3 .sidebar {
+            background-color: #8e24aa;
+        }
+
+        body.style3 .content {
+            background-color: #e1bee7;
+            color: #000;
+        }
+
+        body.style4 {
+            background-color: #fff8e1;
+            font-family: Tahoma, sans-serif;
+            margin: 0;
+        }
+
+        body.style4 .sidebar {
+            background-color: #ff9800;
+        }
+
+        body.style4 .content {
+            background-color: #ffe0b2;
+            color: #000;
+        }
+
+        body.no-style {
+            all: unset;
+            display: block;
+            padding: 20px;
+            font-family: initial;
+        }
+
+        body.no-style nav {
+            all: unset;
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: #f8d7da;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            color: #b30000;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: 140px;
+        }
+
+        body.no-style nav button {
+            color: #b30000;
+            cursor: pointer;
+            text-align: center;
+            border-radius: 4px;
+            padding: 8px 12px;
+            border: none;
+            background: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+
+<body class="style1">
+    <nav>
+        <button onclick="setStyle('style1')"> Stylesheet 1 </button> </br>
+        <button onclick="setStyle('style2')"> Stylesheet 2 </button> </br>
+        <button onclick="setStyle('style3')"> Stylesheet 3 </button> </br>
+        <button onclick="setStyle('style4')"> Stylesheet 4 </button> </br>
+        <button onclick="setStyle('style5')"> No Stylesheet </button> </br>
+    </nav>
+
+    <div class="welcome-box">
+        <h1 id="message"> Welcome to My Homepage </h1> </br>
+        <h4 class="menu-instruction">Use the menu to select different stylesheet </h4>
+    </div>
+
+    <div class="container">
+        <main class="content">
+            <h2>Same page Different Stylesheets </h2>
+            <p> This is a demonstration of how different stylesheets can change the layout of your HTML page. You can
+                change the layout of this page by selecting different style sheets in the menu or by selecting one of
+                the following links: </p>
+
+            <a href="#" onclick="setStyle('style1')"> Stylesheet1 </a> |
+            <a href="#" onclick="setStyle('style2')"> Stylesheet2 </a> |
+            <a href="#" onclick="setStyle('style3')"> Stylesheet3 </a> |
+            <a href="#" onclick="setStyle('style4')"> Stylesheet4 </a>
+
+
+
+            <h4> No Styles </h4>
+            <p> This page uses DIV elements to group different sections of the html page. Click here to see how the page
+                looks like with no stylesheet. </p>
+        </main>
+    </div>
+
+
+    <aside class="sidebar">
+        <h2>Side-Bar</h2>
+        <p>lorem ipsum dolor sit amet, consectetuer adipisoing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
+            dolore magna dolore magna aliquam erat volutpat. </p>
+    </aside>
+
+    <!-- To change the sheet -->
+    <script>
+        function setStyle(styleName) {
+            const body = document.body;
+            body.className = '';  // clear all classes
+            body.classList.add(styleName);  // add selected style class
+            // The heading remains unchanged
+        }
+    </script>
+
+</body>
+
+
+</html>
